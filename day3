@@ -1,0 +1,25 @@
+import java.util.Scanner;
+//check no is armstrong or not?
+public class Day3codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int i;
+        System.out.print("Enter number:");
+        int n = scn.nextInt();
+        int tem=n;
+        int length=(int)Math.log10(Math.abs(n)) + 1;
+        System.out.print("number is:");
+        int r,reverse=0;
+        for(i=1;i<length;i++){
+             r=n%10;
+            reverse=reverse+(r*r*r);
+            n=n/10;
+        }
+        reverse=reverse+(n*n*n);
+         if(tem==reverse){
+             System.out.print(" amrstrong");
+         }
+         else
+             System.out.print(" not armstrong");
+    }
+}
