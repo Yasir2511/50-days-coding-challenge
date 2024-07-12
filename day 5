@@ -16,3 +16,30 @@ public class Day5codingchallenge {
 }
 
 
+
+
+
+import java.util.Scanner;
+//find factors by given number 
+public class Day5codingchallenge {
+    public static void main(String[] args) {
+            Scanner scn=new Scanner(System.in);
+    System.out.print("enter number:");
+        int num=scn.nextInt();
+        int i=2;
+        System.out.println("factors are:");
+        while(i<=num){
+             if(num%i==0){
+                 num=num/i;
+                 System.out.print(i+" ");
+             }
+             else {
+                 i++;
+             }
+} 
+}
+}
+
+
+
+
