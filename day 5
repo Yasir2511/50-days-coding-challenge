@@ -1,0 +1,18 @@
+import java.util.Scanner;
+//give power and base and find answer
+public class Day4codingchallenge {
+    public static void main(String[] args) {
+            Scanner scn=new Scanner(System.in);
+    System.out.print("enter number:");
+        int num=scn.nextInt();
+        System.out.print("enter power:");
+        int power=scn.nextInt();
+        int i,fact=num;
+        for(i=1;i<power;i++){
+             fact=fact*num;
+        }
+        System.out.println("power of "+num+" is "+fact);
+        }
+}
+
+
