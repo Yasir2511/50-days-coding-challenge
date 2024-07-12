@@ -1,6 +1,6 @@
 import java.util.Scanner;
 //give power and base and find answer
-public class Day4codingchallenge {
+public class Day5codingchallenge {
     public static void main(String[] args) {
             Scanner scn=new Scanner(System.in);
     System.out.print("enter number:");
