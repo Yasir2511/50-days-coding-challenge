@@ -1,0 +1,14 @@
+import java.util.Scanner;
+//sutomorphic:automorphic number is a number whose square ends with the same digits as number itself.
+public class Day6codingchallenge {
+    public static void main(String[] args) {
+            Scanner scn=new Scanner(System.in);
+    System.out.print("enter number:");
+        int num=scn.nextInt();
+       int automorphic=num;
+       int square =num*num;
+       int r=square%10;
+       System.out.println(r==num?"number is automorphic":"number is not automorphic");
+    }
+}
+
