@@ -1,6 +1,6 @@
 import java.util.Scanner;
 //sutomorphic:automorphic number is a number whose square ends with the same digits as number itself.
-public class Day6codingchallenge {
+public class Day7codingchallenge {
     public static void main(String[] args) {
             Scanner scn=new Scanner(System.in);
     System.out.print("enter number:");
@@ -11,4 +11,38 @@ public class Day6codingchallenge {
        System.out.println(r==num?"number is automorphic":"number is not automorphic");
     }
 }
+
+
+
+
+
+
+import java.util.Scanner;
+//harshad number  :Ex- Number is 21
+//
+//it is divisible by its own sum (1+2) of its digit(2,1)
+//
+//So it is Harshad's Number
+public class Day7codingchallenge {
+    public static void main(String[] args) {
+            Scanner scn=new Scanner(System.in);
+    System.out.print("enter number:");
+        int num=scn.nextInt();
+        int tem=num;
+        int i,r,sum=0;
+        for(i=1;i<Math.log10(Math.abs(num))+1;i++){
+            r=num%10;
+            num=num/10;
+            sum=sum+r;
+        }
+        sum=sum+num;
+        if(tem%sum==0){
+            System.out.println("it is harshad number");
+        }
+        else {
+            System.out.println("it is not harshad number");
+        }
+    }
+}
+
 
