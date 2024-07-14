@@ -46,3 +46,28 @@ public class Day7codingchallenge {
 }
 
 
+
+
+import java.util.Scanner;
+//abundant number
+// ex:- Abundant number  12 having a proper divisor is 1, 2, 3, 4, 6
+//
+//The sum of these factors is 16 it is greater than 12
+//So it is an Abundant number
+public class Day7codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        System.out.print("enter number:");
+        int num=scn.nextInt();
+        int sum=0,i;
+      for(i=1;i<num;i++){
+          if(num%i==0){
+              sum=sum+i;
+          }
+      }
+        System.out.println(num<sum?"it is abundant number":"it is not abundant number");
+    }
+}
+
+
+
