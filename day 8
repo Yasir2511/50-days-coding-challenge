@@ -34,3 +34,32 @@ public class Day8codingchallenge {
       }
     }
     }
+
+
+
+
+
+import java.util.Scanner;
+// find HCF(highest common factor)
+public class Day8codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        System.out.print("enter first number:");
+        int n=scn.nextInt();
+        System.out.print("enter second number:");
+        int num=scn.nextInt();
+        int i,nvar,hcf=1;
+        if (n >= num) {
+            nvar=num;
+        }
+        else{
+            nvar=n;
+        }
+        for(i=1;i<=nvar;i++){
+        if(n%i==0 && num%i==0){
+            hcf=i;//(highest common factor)
+        }
+        }
+        System.out.println("HCF is "+hcf);
+    }
+    }
