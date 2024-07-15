@@ -5,7 +5,7 @@ import java.util.Scanner;
 //
 //        (1 + 2 + 3)/ 6 = (1 + 2 + 4 + 7 + 14)/ 28
 //
-//        1 = 1  give more examples of friendly pair
+//        1 = 1 
 public class Day8codingchallenge {
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
