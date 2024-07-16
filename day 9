@@ -1,0 +1,23 @@
+import java.util.Scanner;
+// find LCM
+public class Day9codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("enter first number:");
+        int n = scn.nextInt();
+        System.out.print("enter second number:");
+        int num = scn.nextInt();
+        int lcm = lcm(n, num);
+        System.out.println("LCM is" + lcm);
+    }
+        public static int lcm(int first,int second){
+            int i=1;
+            while(true) {
+                if((i*first)%second==0)
+                {
+                    return i*first;
+                }
+                i++;
+            }
+        }
+    }
