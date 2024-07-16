@@ -19,5 +19,28 @@ public class Day9codingchallenge {
                 }
                 i++;
             }
+
+
+
+
+import java.util.Scanner;
+// find LCM
+public class Day9codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("enter number in binary:");
+        int n = scn.nextInt();
+        double sum=0,r,i;
+        double base=2;
+        double length=Math.log(Math.abs(n))+1;
+        for(i=0;i<length;i++){
+            r=n%10;
+            n=n/10;
+            sum=sum+(r*Math.pow(base, i));
+        }
+        sum=sum+(n*Math.pow(base, (length-1)));
+        System.out.println(sum);
+        }
+    }
         }
     }
