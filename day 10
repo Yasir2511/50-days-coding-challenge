@@ -1,0 +1,19 @@
+import java.util.Scanner;
+// octal to decimal
+      public class Day10codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("enter number in octal:");
+        int n = scn.nextInt();
+        int sum=0,r,i;
+        int base=8;
+        int length=(int)Math.log(Math.abs(n))+1;
+        for(i=0;i<length;i++){
+            r=n%10;
+            n=n/10;
+            sum=sum+(int)(r*Math.pow(base, i));
+        }
+        sum=sum+(int)(n*Math.pow(base, (length-1)));
+        System.out.println(sum);
+        }
+    }
