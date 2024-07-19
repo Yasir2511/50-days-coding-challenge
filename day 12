@@ -15,3 +15,25 @@ public class Day12codingchallenge {
         }
     }
 }
+
+
+
+
+
+import java.util.Scanner;
+//decimal to octal
+public class Day12codingchallenge {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num=scanner.nextInt();
+       int r;
+       String octal="";
+        while(num!=0){
+            r=(int)num%2;
+            num=num/2;
+            octal=r+octal;
+        }
+        System.out.print("octal number :"+octal);
+    }
+}
