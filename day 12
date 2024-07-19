@@ -1,0 +1,17 @@
+import java.util.Scanner;
+//decimal to binary
+public class Day12codingchallenge {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num=scanner.nextInt();
+       int r;
+       String binary="";
+        while(num!=0){
+            r=(int)num%2;
+            num=num/2;
+            binary=r+binary;
+            System.out.print("binary number :"+binary);
+        }
+    }
+}
