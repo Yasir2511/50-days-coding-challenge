@@ -30,8 +30,8 @@ public class Day12codingchallenge {
        int r;
        String octal="";
         while(num!=0){
-            r=(int)num%2;
-            num=num/2;
+            r=(int)num%8;
+            num=num/8;
             octal=r+octal;
         }
         System.out.print("octal number :"+octal);
