@@ -1,0 +1,27 @@
+import java.util.Scanner;
+//binary to octal(binary->decimal->octal)
+public class Day14codingchallenge
+{ public static void main (String[]args)
+    {
+          Scanner scn=new Scanner(System.in);
+        System.out.println("enter number in binary form:");
+        int binary=scn.nextInt();
+        int length=(int)Math.log10(Math.abs(binary))+1;
+        int i,decimal=0,r,base=2;
+        for(i=0;i<length-1;i++){
+            r=binary%10;
+            binary=binary/10;
+            decimal=decimal+(int)(r*Math.pow(base,i));
+        }
+        decimal=decimal+(int)(binary*Math.pow(base,(length-1)));
+         decimaltoOctal(decimal);}
+    static void decimaltoOctal(int x){
+        String octal="";
+        int r;
+        while(x!=0){
+            r=x%8;
+            x=x/8;
+            octal=r+octal;
+        }
+       System.out.println(octal);
+}}
