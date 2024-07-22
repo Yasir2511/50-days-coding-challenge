@@ -25,3 +25,47 @@ public class Day15codingchallenge {
         System.out.println(binary);
     }
 }
+
+
+
+
+
+
+
+import java.util.Scanner;
+// the program for Quadrants In Which Coordinates Lie
+public class Day15codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter abcissa:");
+        int x = scn.nextInt();
+        System.out.println("enter ordinate :");
+        int y = scn.nextInt();
+        if (x>0 && y>0)
+        {
+            System.out.println("coordinates lie in first quadrant ");
+        } else if (x<0 && y>0) {
+            System.out.println("coordinates lie in second quadrant ");
+            }
+            else if (x<0 && y<0)
+            {
+                System.out.println("coordinates lie in third quadrant ");
+            }
+            else if (x>0 && y<0)
+        {
+            System.out.println("coordinates lie in fourth quadrant ");
+        }
+            else if (x!=0 && y==0)
+        {
+            System.out.println("coordinates lie in x- axis ");
+        }
+        else if (x==0 && y!=0)
+        {
+            System.out.println("coordinates lie in y- axis ");
+        }
+        else if (x==0 && y==0)
+        {
+            System.out.println("coordinates lie in origin ");
+        }
+    }
+}
