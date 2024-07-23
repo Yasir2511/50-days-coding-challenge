@@ -26,3 +26,21 @@ public class Day16codingchallenge {
         }
         return sum;
     }}
+
+
+
+
+
+
+import java.util.Scanner;
+//if there are n number of people in a meeting and find the possible number
+// of handshakes made by the person who entered the room after all were settled.
+public class Day16codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter number of persons:");
+        int n = scn.nextInt();
+         int result=n*(n-1)/2;
+        System.out.println("no of handshakes="+result);
+    }
+}
