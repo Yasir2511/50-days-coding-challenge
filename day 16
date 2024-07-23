@@ -1,0 +1,28 @@
+import java.util.Scanner;
+// In a classroom some of the seats are already occupied by students and only a few seats are
+// available in the classroom. The available seats are assumed as r and n number of students
+// are looking for the seat. We need to find in how many different permutations n number of
+// students can sit on r number of chairs.
+public class Day16codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter number of students need seats:");
+        int n = scn.nextInt();
+        System.out.println("enter number of seats available:");
+        int r = scn.nextInt();
+        int x=n-r;
+        if (r>n){
+            System.out.println("always zero because you cannot arrange more elements than are available");
+        }
+        else {
+            int result = factorial(n) / factorial(x);
+            System.out.println("total possible arrangements:" + result);
+        }
+    }static int factorial(int a){
+        int i=1,sum=1;
+        while(i<=a){
+            sum=sum*i;
+            i++;
+        }
+        return sum;
+    }}
