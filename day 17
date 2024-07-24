@@ -1,0 +1,29 @@
+import java.util.Scanner;
+//sum of two fractions
+public class Day16codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter first fraction numerator:");
+        int n = scn.nextInt();
+        System.out.println("enter first fraction denominator:");
+        int d = scn.nextInt();
+        System.out.println("enter second fraction numerator:");
+        int n1 = scn.nextInt();
+        System.out.println("enter second fraction denominator:");
+        int d1 = scn.nextInt();
+        int lcm =lcm(d,d1);
+        int x=lcm/d,y=lcm/d1;
+        int sum=(n*x)+(n1*y);
+        System.out.println("sum of two fractions are "+sum+"/"+lcm);
+
+    }
+    static int lcm(int x,int y){
+        int i=1;
+        while(true){
+            if((i*x)%y==0)
+                return i*x;
+            i++;
+
+        }
+    }
+}
