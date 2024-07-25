@@ -23,3 +23,20 @@ public class Day18codingchallenge {
         System.out.println(str);
     }
 }
+
+
+
+
+
+import java.util.Scanner;
+//area of circle
+public class Day18codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter radius :");
+        int n = scn.nextInt();
+        double area=3.14*n*n;
+        System.out.println("area of circle:"+area);
+
+    }
+}
