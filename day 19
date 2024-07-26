@@ -1,0 +1,41 @@
+import java.util.Scanner;
+//find prime factors of given number
+public class Day19codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter number :");
+        int n = scn.nextInt();
+        int[] arr=new int[300];
+        arr[0]=2;
+        arr[1]=3;
+       prime(arr);
+        System.out.println("prime mutliplication factor are:");
+       findresult(n,arr);
+    }
+    static int[] prime(int[] arr) {
+        int i, j, k = 2;
+        boolean isPrime;
+        for (i = 4; i < 500; i++) {
+            isPrime = true;
+            for (j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                arr[k] = i;
+                k++;
+            }
+        }
+        return arr;
+    }
+    static void findresult(int n,int[] arr){
+        for (int i = 0; arr[i] <= n / 2 && i < arr.length; i++) {
+            if (n % arr[i] == 0) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+    }
+
+}
