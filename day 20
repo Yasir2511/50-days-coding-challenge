@@ -1,0 +1,28 @@
+import java.util.Scanner;
+//duplicacy of element
+public class Day20codingchallenge {
+        public static void main(String[] args)
+        {
+            System.out.print("enter the size of array that you want to take :");
+            Scanner scn=new Scanner(System.in);
+            int size=scn.nextInt();
+            int i;
+            int[] arr=new int[size];
+            System.out.print("enter the elements of array:");
+            for(i=0;i<size;i++)
+            {
+                arr[i]=scn.nextInt();
+            }
+            System.out.print("enter the element that you want to count :");
+            int a=scn.nextInt();
+            int count=0;
+            for(i=0;i<size;i++){
+                if(arr[i]==a)
+                {
+                    count=count+1;
+                }
+            }
+            System.out.print(a+" is present in given array "+count+" times.");
+
+        }
+    }
