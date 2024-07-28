@@ -1,0 +1,31 @@
+import java.util.Scanner;
+//Count possible decoding of a given digit sequence
+public class Day21codingchallenge {
+        public static void main(String[] args)
+        {    Scanner scn=new Scanner(System.in);
+            char[] digitToCharMap = new char[27];  // Index 0 will be unused
+            for (int i = 1; i <= 26; i++) {
+                digitToCharMap[i] = (char) ('A' + i - 1);
+            }
+            //When you add an integer to a character in Java, the character is converted to its ASCII numeric code.
+            //For example, if i is 1, then 'A' + 1 - 1 equals 'A' + 0, which is still 65.
+            //If i is 2, then 'A' + 2 - 1 equals 'A' + 1, which is 66. This corresponds to the character 'B'
+            System.out.print("enter number:");
+            int num=scn.nextInt();
+            int length=(int)Math.log10(Math.abs(num))+1;;
+            int r,i;
+            String store="";
+            for(i=0;i<length;i++){
+                r=num%10;
+                num=num/10;
+                char a=printvalue(r,digitToCharMap);
+                store=a+store;
+            }
+            System.out.println(store);
+
+                    }
+        static char printvalue(int a,char []digitToCharMap){
+                return digitToCharMap[a];
+        }
+    }
+
