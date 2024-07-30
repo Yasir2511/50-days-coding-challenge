@@ -1,0 +1,22 @@
+import java.util.Scanner;
+//   Program for finding the occurrence of a digit in a given number
+public class Day23codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter number :");
+        int num = scn.nextInt();
+        System.out.print("finding digit :");
+        int key = scn.nextInt();
+        int length=(int)Math.log10(Math.abs(num))+1;
+        int r,i,count=0;
+        for(i=0;i<length;i++)
+        {
+        r=num%10;
+        num=num/10;
+        if(key==r){
+            count=count+1;
+        }
+        }
+        System.out.println(count+" times");
+    }
+    }
