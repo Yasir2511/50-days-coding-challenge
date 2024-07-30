@@ -20,3 +20,36 @@ public class Day23codingchallenge {
         System.out.println(count+" times");
     }
     }
+
+
+
+
+
+import java.util.Scanner;
+//   program to find number of integers which has exactly x divisors
+public class Day23codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int[] arr=new int[101];
+        System.out.println("enter numbers:");
+        int key=scn.nextInt();
+        int i,j,count;
+        System.out.println("numbers are:");
+        for(i=1;i<=100;i++)
+        {
+            arr[i]=i;
+        }
+        for(i=1;i<=100;i++) {
+            count=0;
+            for (j = 1; j <=i; j++) {
+                if (arr[i]%arr[j]==0){
+                    count=count+1;
+                }
+            }
+            if(count==key){
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+
