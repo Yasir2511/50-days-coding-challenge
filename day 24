@@ -1,0 +1,29 @@
+import java.util.Scanner;
+//   delete an elements from array
+public class Day24codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter number :");
+        int val = scn.nextInt();
+        System.out.println("enter array size:");
+        int size = scn.nextInt();
+        int[] nums = new int[size];
+        System.out.println("enter array elments:");
+        int i, k = 0;
+        for (i = 0; i < size; i++) {
+            nums[i] = scn.nextInt();
+        }
+        int[] num = new int[100];
+        for (i = 0; i < size; i++) {
+            if (nums[i] != val) {
+                num[k]= nums[i];
+                k++;
+            }
+        }
+        for (i = 0; i < k; i++) {
+        {
+                System.out.println("now array is " + num[i]);
+            }
+        }
+    }
+}
