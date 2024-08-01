@@ -1,0 +1,27 @@
+import java.util.Scanner;
+//   we will find the roots of a quadratic equation [ax2 + bx + c].
+public class Day25codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("if the equation is in the form [ax2 + bx + c] then enter value of a:");
+        int a = scn.nextInt();
+        System.out.println("if the equation is in the form [ax2 + bx + c] then enter value of b:");
+        int b = scn.nextInt();
+        System.out.println("if the equation is in the form [ax2 + bx + c] then enter value of c:");
+        int c = scn.nextInt();
+        System.out.println("so now your equation is :"+a+"x^2"+"+"+b+"x"+"+"+c);
+        float D=b*b-4*a*c;
+        double squareroot=Math.sqrt(D);
+        if(D==0){
+            System.out.println("real and equal root exists ");
+        } else if (D>0) {
+            System.out.println("real roots exists");
+        }
+        else {
+            System.out.println("imaginary roots exists");
+        }
+      double result=(-b+squareroot)/2*a;
+        System.out.println(result);
+
+    }
+}
