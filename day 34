@@ -1,4 +1,25 @@
 Given an array nums of size n, return the majority element.
 
 The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        int length= nums.length;
+int j=0,count=0,i,k=0,a=0;
+while(j<length){
+for (i=0;i<length;i++){
+if(nums[j]==nums[i]){
+count=count+1;
+}
+}
+if(count>a){
+a=count;
+k=nums[j];
+}
+j++;
+count=0;
+}
+return k;
+    }
+}
   
