@@ -16,10 +16,12 @@ if(count>a){
 a=count;
 k=nums[j];
 }
+if (a > length / 2) {
+                return k;
+            }
 j++;
 count=0;
 }
 return k;
     }
 }
-  
