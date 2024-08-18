@@ -1,3 +1,22 @@
 Given an integer x, return true if x is a 
 palindrome
 , and false otherwise.
+class Solution {
+    public boolean isPalindrome(int x) {
+        // If x is negative
+        if (x < 0) {
+            return false;
+        }
+        
+        int tem = x;
+        int r, sum = 0;
+        
+        while (x != 0) {
+            r = x % 10;
+            x = x / 10;
+            sum = sum * 10 + r;
+        }
+        
+        return sum == tem;
+    }
+}
