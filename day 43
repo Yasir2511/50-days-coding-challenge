@@ -4,4 +4,17 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 
- 
+ class Solution {
+    public int[] twoSum(int[] nums, int target) {
+       int length=nums.length;
+        int i,j;
+        for(i=0;i<(length-1);i++){
+            for(j=i+1;j<length;j++){
+             if(nums[i]+nums[j]==target){
+             return new int[]{i,j};
+            }
+        }
+    }
+    return new int[0];
+    }
+}
