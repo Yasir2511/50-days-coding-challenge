@@ -1,0 +1,36 @@
+search element in 2d array
+
+import java.util.Scanner;
+
+public class Day44codingchallenge {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int i, j;
+        System.out.println("Enter number of rows:");
+        int row = scn.nextInt();
+        System.out.println("Enter number of columns:");
+        int column = scn.nextInt();
+        System.out.println("Enter number you want to search:");
+        int searchNumber = scn.nextInt();
+        int[][] arr = new int[row][column];
+        System.out.println("Enter the elements of the matrix:");
+        for(i = 0; i < row; i++) {
+            for(j = 0; j < column; j++) {
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        boolean isPresent = false;
+        for(i = 0; i < row; i++) {
+            for(j = 0; j < column; j++) {
+                if (arr[i][j] == searchNumber) {
+                    isPresent = true;
+                    break;
+                }
+            }
+        if (isPresent) {
+            System.out.println("Present");
+        } else {
+            System.out.println("Not present");
+        }
+    }
+}
